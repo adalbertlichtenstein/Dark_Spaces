@@ -1,0 +1,5 @@
+colcon build --packages-select $PACKAGE --meson-args \
+    -D$ARG1=$PARAM1 \
+    -D$ARG2=$PARAM2
+colcon build --packages-select $PACKAGE --meson-args \
+    --buildtype=debugoptimized

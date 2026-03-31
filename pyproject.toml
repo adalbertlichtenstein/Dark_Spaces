@@ -1,0 +1,97 @@
+[build-system]
+requires = ["maturin"]
+build-backend = "maturin"
+
+[project]
+name = "Dark_Spaces"
+version = "0.1.0"
+dependencies = [
+  "httpx",
+  "gidgethub[httpx]>4.0.0",
+  "django>2.1; os_name != 'nt'",
+  "django>2.0; os_name == 'nt'",
+]
+requires-python = ">=3.13"
+requires = ["maturin>=1.0,<2.0"]
+authors = [
+  {name = "Adalbert Lichtenstein", email = "lichtensteinadalbert@gmail.com"},
+]
+maintainers = [
+  {name = "Adalbert Lichtenstein", email = "lichtensteinadalbert@gmail.com"}
+]
+description = "Lovely Univers! Wonderful Dark_Spaces!"
+readme = "README.rst"
+license = "MIT"
+keywords = ["egg", "bacon", "sausage", "tomatoes", "Lobster Thermidor"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+[project.optional-dependencies]
+gui = ["PyQt5"]
+cli = [
+  "rich",
+  "click",
+]
+
+cpu = [
+  "torch",
+]
+gpu = [
+  "torch",
+]
+
+dev = ["black", "isort"]
+
+[dependency-groups]
+dev = [
+  "pytest"
+]
+lint = [
+  "ruff"
+]
+
+test = ["whatever"]
+
+[metadata]
+
+[options]
+
+py_modules=["six"]
+
+[project.urls]
+Repository = "https://github.com/adalbertlichtenstein/Dark_Spaces.git"
+
+[project.scripts]
+Dark_Spaces-cli = "Dark_Spaces:main_cli"
+
+[project.gui-scripts]
+Dark_Spaces-gui = "Dark_Spaces:main_gui"
+
+[project.entry-points."Dark_Spaces.magical"]
+tomatoes = "Dark_Spaces:main_tomatoes"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/foo"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[package.metadata.maturin]
+requires-dist = ["flask~=1.1.0", "toml==0.10.0"]
+
+[tool.setuptools.dynamic]
+version = {attr = "Dark_Spaces.__version__"} 
+readme = {file = ["README.rst", "USAGE.rst"]}
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+
+[tool.pytest]
+minversion = "9.0"
+addopts = ["-ra", "-q"]
+testpaths = [
+    "tests",
+    "integration",
+]

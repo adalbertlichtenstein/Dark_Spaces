@@ -1,0 +1,20 @@
+{
+  "name": "dark_spaces",
+  "version": "0.1.0",
+  "description": "A Deep Sky project",
+  "homepage": "https://github.com/adalbertlichtenstein/Dark_Spaces#readme",
+  "bugs": {
+    "url": "https://github.com/adalbertlichtenstein/Dark_Spaces/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adalbertlichtenstein/Dark_Spaces.git"
+  },
+  "license": "ISC",
+  "author": "Adalbert Lichtenstein",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

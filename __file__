@@ -1,0 +1,23 @@
+import os
+
+# Get the absolute path of the current script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Print the script's directory
+print(f"Script directory: {script_dir}")
+
+import os
+
+# Get the directory of the current script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Create a path to a data file inside a 'data' subdirectory
+data_file = os.path.join(script_dir, "data", "data_file.txt")
+print(data_file)
+
+import logging
+
+# Set up logging configuration
+logging.basicConfig(level=logging.INFO)
+# Log the path of the current script
+logging.info(f"Running script from: {__file__}")

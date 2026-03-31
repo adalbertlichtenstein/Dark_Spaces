@@ -1,0 +1,34 @@
+
+# We know the fabs() in python come in the math module as below.
+
+import math
+math.fabs(-10.6)
+
+# where a is the specified number whose absolute value as a float we want to print.
+
+print ("By using the original module :" , math.fabs(-10.6))
+ 
+# Now, we use the __import__ in python as below.
+
+maths_1 = __import__('math', globals(), locals(), [], 0)
+
+# Specify the name as math and import fromlist, and also, the import level is 0.
+# Printing the absolute value of a number as a float by using fabs() in python
+
+print("By using the __import__ in python:" , maths_1.fabs(-10.3))
+
+
+print("We can access fabs() by two ways: " , " math.fabs as " , math.fabs(-10.6)  ," and math_1.fabs as  ", maths_1.fabs(-10.3) )
+
+
+# We are importing the numpy module
+# This is the same as "import numpy as np"
+np = __import__('numpy', globals(), locals(), [], 0)
+  
+# Below is the array from numpy module.
+s = np.array([7, 14, 21])
+  
+# Now we print the array.  
+print("The values in array are:", s)  
+# Now we print the type to know the class.
+print("The type of the imported numpy module is:" ,type(s))
