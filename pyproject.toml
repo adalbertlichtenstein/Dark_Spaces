@@ -1,10 +1,12 @@
 [build-system]
-requires = ["maturin"]
-build-backend = "maturin"
+# Minimum requirements for the build system to execute.
+requires = ["setuptools"]
 
 [project]
 name = "Dark_Spaces"
 version = "0.1.0"
+import-names = ["Dark_Dpaces", "_private_module ; private"]
+
 dependencies = [
   "httpx",
   "gidgethub[httpx]>4.0.0",
@@ -12,7 +14,7 @@ dependencies = [
   "django>2.0; os_name == 'nt'",
 ]
 requires-python = ">=3.13"
-requires = ["maturin>=1.0,<2.0"]
+#requires = ["maturin>=1.0,<2.0"]
 authors = [
   {name = "Adalbert Lichtenstein", email = "lichtensteinadalbert@gmail.com"},
 ]
@@ -86,7 +88,7 @@ version = {attr = "Dark_Spaces.__version__"}
 readme = {file = ["README.rst", "USAGE.rst"]}
 
 [tool.maturin]
-features = ["pyo3/extension-module"]
+#features = ["pyo3/extension-module"]
 
 [tool.pytest]
 minversion = "9.0"
