@@ -1,0 +1,15 @@
+[user]
+	name = Adalbert Lichtenstein
+	email = lichtensteinadalbert@gmail.com
+	username = adalbertlichtenstein
+	signingKey = /data/data/com.termux/files/home/.ssh/id_rsa.pub
+[core]
+	editor = nano
+[gpg]
+	format = ssh
+[init]
+	defaultBranch = Dark_Spaces
+[commit]
+	gpgsign = true
+[gpg "ssh"]
+	allowedSignersFile = /data/data/com.termux/files/home/.git/allowed_signers
